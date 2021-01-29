@@ -1,0 +1,47 @@
+1611960954747	geckodriver	INFO	Listening on 127.0.0.1:55265
+1611960954761	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/zd/d21d8xnn5zlbvgm1t_gnvhbc0000gn/T/rust_mozprofilehRcZIL"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1611960956766	Marionette	INFO	Listening on port 55270
+1611960956830	Marionette	WARN	TLS certificate errors will be ignored for this session
+2021-01-29 17:56:01.233 plugin-container[66096:12318348] NSNotificationCenter connection invalid
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+JavaScript error: data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=, line 1: SyntaxError: illegal character U+0001
+JavaScript error: data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=, line 1: SyntaxError: illegal character U+0001
+JavaScript error: data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=, line 1: SyntaxError: illegal character U+0001
+1611961044936	geckodriver	INFO	Listening on 127.0.0.1:55426
+1611961044945	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/zd/d21d8xnn5zlbvgm1t_gnvhbc0000gn/T/rust_mozprofilezh0WcF"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1611961047090	Marionette	INFO	Listening on port 55431
+1611961047115	Marionette	WARN	TLS certificate errors will be ignored for this session
+2021-01-29 17:57:31.430 plugin-container[66107:12324183] NSNotificationCenter connection invalid
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+JavaScript error: data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=, line 1: SyntaxError: illegal character U+0001
+JavaScript error: data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=, line 1: SyntaxError: illegal character U+0001
+JavaScript error: data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=, line 1: SyntaxError: illegal character U+0001
+JavaScript error: data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=, line 1: SyntaxError: illegal character U+0001
+JavaScript error: data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=, line 1: SyntaxError: illegal character U+0001
+1611961227103	geckodriver	INFO	Listening on 127.0.0.1:55624
+1611961227114	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/zd/d21d8xnn5zlbvgm1t_gnvhbc0000gn/T/rust_mozprofileDSoElo"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1611961229130	Marionette	INFO	Listening on port 55629
+1611961229204	Marionette	WARN	TLS certificate errors will be ignored for this session
+2021-01-29 18:00:33.628 plugin-container[66151:12330560] NSNotificationCenter connection invalid
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+JavaScript error: data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=, line 1: SyntaxError: illegal character U+0001
+JavaScript error: data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=, line 1: SyntaxError: illegal character U+0001
+JavaScript error: data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=, line 1: SyntaxError: illegal character U+0001
+JavaScript error: data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=, line 1: SyntaxError: illegal character U+0001
+1611961655451	geckodriver	INFO	Listening on 127.0.0.1:56323
+1611961655460	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/zd/d21d8xnn5zlbvgm1t_gnvhbc0000gn/T/rust_mozprofileKFQQqv"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1611961657944	Marionette	INFO	Listening on port 56328
+1611961669138	geckodriver	INFO	Listening on 127.0.0.1:56374
+1611961669146	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/zd/d21d8xnn5zlbvgm1t_gnvhbc0000gn/T/rust_mozprofileuCkGoq"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1611961671000	Marionette	INFO	Listening on port 56379
+1611961671098	Marionette	WARN	TLS certificate errors will be ignored for this session
+1611961671109	Marionette	ERROR	[19] No reply from Marionette:Register
+2021-01-29 18:07:55.443 plugin-container[66265:12346395] NSNotificationCenter connection invalid
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
