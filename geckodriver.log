@@ -45,3 +45,127 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1611961671109	Marionette	ERROR	[19] No reply from Marionette:Register
 2021-01-29 18:07:55.443 plugin-container[66265:12346395] NSNotificationCenter connection invalid
 _RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+1611964519695	geckodriver	INFO	Listening on 127.0.0.1:56819
+1611964519704	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/zd/d21d8xnn5zlbvgm1t_gnvhbc0000gn/T/rust_mozprofileCsoNB3"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1611964521515	Marionette	INFO	Listening on port 56824
+1611964521559	Marionette	WARN	TLS certificate errors will be ignored for this session
+1611964521576	Marionette	ERROR	[19] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+2021-01-29 18:55:25.994 plugin-container[66636:12401415] NSNotificationCenter connection invalid
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+JavaScript error: data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=, line 1: SyntaxError: illegal character U+0001
+1611964529896	Marionette	ERROR	[4294967332] No reply from Marionette:Register
+1611964529925	Marionette	ERROR	[4294967333] No reply from Marionette:Register
+1611964529953	Marionette	ERROR	[4294967334] No reply from Marionette:Register
+1611964529984	Marionette	ERROR	[4294967335] No reply from Marionette:Register
+1611964530023	Marionette	ERROR	[4294967336] No reply from Marionette:Register
+1611964530056	Marionette	ERROR	[4294967337] No reply from Marionette:Register
+1611964530084	Marionette	ERROR	[4294967338] No reply from Marionette:Register
+1611964530109	Marionette	ERROR	[4294967339] No reply from Marionette:Register
+1611964530138	Marionette	ERROR	[4294967340] No reply from Marionette:Register
+1611964530165	Marionette	ERROR	[4294967341] No reply from Marionette:Register
+1611964530191	Marionette	ERROR	[4294967342] No reply from Marionette:Register
+1611964530220	Marionette	ERROR	[4294967343] No reply from Marionette:Register
+1611964530248	Marionette	ERROR	[4294967344] No reply from Marionette:Register
+1611964530274	Marionette	ERROR	[4294967345] No reply from Marionette:Register
+1611964530310	Marionette	ERROR	[4294967346] No reply from Marionette:Register
+1611964530341	Marionette	ERROR	[4294967347] No reply from Marionette:Register
+1611964530369	Marionette	ERROR	[4294967348] No reply from Marionette:Register
+1611964530399	Marionette	ERROR	[4294967349] No reply from Marionette:Register
+1611964530424	Marionette	ERROR	[4294967350] No reply from Marionette:Register
+1611964530453	Marionette	ERROR	[4294967351] No reply from Marionette:Register
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: https://widgets.outbrain.com/nanoWidget/externals/obUserFrame/test.html?lsd=d72cfa61-fe52-45f3-a580-7bdb30ba4372, line 29: SecurityError: The operation is insecure.
+JavaScript error: https://widgets.outbrain.com/widgetOBUserSync/obUserSync.html#pid=26860&dmpenabled=false&filterDMP=&csenabled=true&d=xb7LNrgy8aKe6FOaWbswPqqTDe-wW91V0ifnqhe3Onkp6oS_L6QRUUsgT34F81bp&gdpr=0&cmpNeeded=false&gdprVer=2&ccpa=1---&country=US, line 3: SecurityError: The operation is insecure.
+JavaScript error: https://widgets.outbrain.com/nanoWidget/externals/obUserFrame/test.html?lsd=d72cfa61-fe52-45f3-a580-7bdb30ba4372, line 29: SecurityError: The operation is insecure.
+JavaScript error: https://widgets.outbrain.com/widgetOBUserSync/obUserSync.html#pid=26860&dmpenabled=false&filterDMP=&csenabled=true&d=xb7LNrgy8aKe6FOaWbswPqqTDe-wW91V0ifnqhe3Onkp6oS_L6QRUUsgT34F81bp&gdpr=0&cmpNeeded=false&gdprVer=2&ccpa=1---&country=US, line 3: SecurityError: The operation is insecure.
+JavaScript error: https://widgets.outbrain.com/nanoWidget/externals/obUserFrame/test.html?lsd=d72cfa61-fe52-45f3-a580-7bdb30ba4372, line 29: SecurityError: The operation is insecure.
+JavaScript error: https://widgets.outbrain.com/widgetOBUserSync/obUserSync.html#pid=26860&dmpenabled=false&filterDMP=&csenabled=true&d=xb7LNrgy8aKe6FOaWbswPqqTDe-wW91V0ifnqhe3Onkp6oS_L6QRUUsgT34F81bp&gdpr=0&cmpNeeded=false&gdprVer=2&ccpa=1---&country=US, line 3: SecurityError: The operation is insecure.
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=, line 1: SyntaxError: illegal character U+0001
+1611964534841	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'loading'.
+JavaScript error: https://widgets.outbrain.com/nanoWidget/externals/obUserFrame/test.html?lsd=d72cfa61-fe52-45f3-a580-7bdb30ba4372, line 29: SecurityError: The operation is insecure.
+JavaScript error: https://widgets.outbrain.com/widgetOBUserSync/obUserSync.html#pid=26860&dmpenabled=false&filterDMP=&csenabled=true&d=xb7LNrgy8aKe6FOaWbswPqqTDe-wW91V0ifnqhe3Onkp6oS_L6QRUUsgT34F81bp&gdpr=0&cmpNeeded=false&gdprVer=2&ccpa=1---&country=US, line 3: SecurityError: The operation is insecure.
+JavaScript error: data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=, line 1: SyntaxError: illegal character U+0001
+1611964535806	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'loading'.
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: https://widgets.outbrain.com/nanoWidget/externals/obUserFrame/test.html?lsd=d72cfa61-fe52-45f3-a580-7bdb30ba4372, line 29: SecurityError: The operation is insecure.
+JavaScript error: https://widgets.outbrain.com/widgetOBUserSync/obUserSync.html#pid=26860&dmpenabled=false&filterDMP=&csenabled=true&d=xb7LNrgy8aKe6FOaWbswPqqTDe-wW91V0ifnqhe3Onkp6oS_L6QRUUsgT34F81bp&gdpr=0&cmpNeeded=false&gdprVer=2&ccpa=1---&country=US, line 3: SecurityError: The operation is insecure.
+JavaScript error: https://widgets.outbrain.com/widgetOBUserSync/obUserSync.html#pid=26860&dmpenabled=false&filterDMP=&csenabled=true&d=xb7LNrgy8aKe6FOaWbswPqqTDe-wW91V0ifnqhe3Onkp6oS_L6QRUUsgT34F81bp&gdpr=0&cmpNeeded=false&gdprVer=2&ccpa=1---&country=US, line 3: SecurityError: The operation is insecure.
+JavaScript error: https://widgets.outbrain.com/nanoWidget/externals/obUserFrame/test.html?lsd=d72cfa61-fe52-45f3-a580-7bdb30ba4372, line 29: SecurityError: The operation is insecure.
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: https://widgets.outbrain.com/nanoWidget/externals/obUserFrame/test.html?lsd=d72cfa61-fe52-45f3-a580-7bdb30ba4372, line 29: SecurityError: The operation is insecure.
+JavaScript error: https://widgets.outbrain.com/widgetOBUserSync/obUserSync.html#pid=26860&dmpenabled=false&filterDMP=&csenabled=true&d=xb7LNrgy8aKe6FOaWbswPqqTDe-wW91V0ifnqhe3Onkp6oS_L6QRUUsgT34F81bp&gdpr=0&cmpNeeded=false&gdprVer=2&ccpa=1---&country=US, line 3: SecurityError: The operation is insecure.
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: https://widgets.outbrain.com/widgetOBUserSync/obUserSync.html#pid=26860&dmpenabled=false&filterDMP=&csenabled=true&d=xb7LNrgy8aKe6FOaWbswPqqTDe-wW91V0ifnqhe3Onkp6oS_L6QRUUsgT34F81bp&gdpr=0&cmpNeeded=false&gdprVer=2&ccpa=1---&country=US, line 3: SecurityError: The operation is insecure.
+JavaScript error: https://widgets.outbrain.com/nanoWidget/externals/obUserFrame/test.html?lsd=d72cfa61-fe52-45f3-a580-7bdb30ba4372, line 29: SecurityError: The operation is insecure.
+JavaScript error: data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=, line 1: SyntaxError: illegal character U+0001
+1611964538762	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'loading'.
+JavaScript error: data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=, line 1: SyntaxError: illegal character U+0001
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=, line 1: SyntaxError: illegal character U+0001
+1611964539812	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'loading'.
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: https://widgets.outbrain.com/nanoWidget/externals/obUserFrame/test.html?lsd=d72cfa61-fe52-45f3-a580-7bdb30ba4372, line 29: SecurityError: The operation is insecure.
+JavaScript error: https://widgets.outbrain.com/widgetOBUserSync/obUserSync.html#pid=26860&dmpenabled=false&filterDMP=&csenabled=true&d=xb7LNrgy8aKe6FOaWbswPqqTDe-wW91V0ifnqhe3Onkp6oS_L6QRUUsgT34F81bp&gdpr=0&cmpNeeded=false&gdprVer=2&ccpa=1---&country=US, line 3: SecurityError: The operation is insecure.
+JavaScript error: https://widgets.outbrain.com/widgetOBUserSync/obUserSync.html#pid=26860&dmpenabled=false&filterDMP=&csenabled=true&d=xb7LNrgy8aKe6FOaWbswPqqTDe-wW91V0ifnqhe3Onkp6oS_L6QRUUsgT34F81bp&gdpr=0&cmpNeeded=false&gdprVer=2&ccpa=1---&country=US, line 3: SecurityError: The operation is insecure.
+JavaScript error: https://widgets.outbrain.com/nanoWidget/externals/obUserFrame/test.html?lsd=d72cfa61-fe52-45f3-a580-7bdb30ba4372, line 29: SecurityError: The operation is insecure.
+JavaScript error: data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=, line 1: SyntaxError: illegal character U+0001
+1611964541409	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'loading'.
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=, line 1: SyntaxError: illegal character U+0001
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: https://widgets.outbrain.com/nanoWidget/externals/obUserFrame/test.html?lsd=d72cfa61-fe52-45f3-a580-7bdb30ba4372, line 29: SecurityError: The operation is insecure.
+JavaScript error: https://widgets.outbrain.com/widgetOBUserSync/obUserSync.html#pid=26860&dmpenabled=false&filterDMP=&csenabled=true&d=xb7LNrgy8aKe6FOaWbswPqqTDe-wW91V0ifnqhe3Onkp6oS_L6QRUUsgT34F81bp&gdpr=0&cmpNeeded=false&gdprVer=2&ccpa=1---&country=US, line 3: SecurityError: The operation is insecure.
+1611964542138	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'loading'.
+JavaScript error: https://widgets.outbrain.com/nanoWidget/externals/obUserFrame/test.html?lsd=d72cfa61-fe52-45f3-a580-7bdb30ba4372, line 29: SecurityError: The operation is insecure.
+JavaScript error: https://widgets.outbrain.com/widgetOBUserSync/obUserSync.html#pid=26860&dmpenabled=false&filterDMP=&csenabled=true&d=xb7LNrgy8aKe6FOaWbswPqqTDe-wW91V0ifnqhe3Onkp6oS_L6QRUUsgT34F81bp&gdpr=0&cmpNeeded=false&gdprVer=2&ccpa=1---&country=US, line 3: SecurityError: The operation is insecure.
+JavaScript error: data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=, line 1: SyntaxError: illegal character U+0001
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+1611964543379	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'loading'.
+JavaScript error: https://widgets.outbrain.com/nanoWidget/externals/obUserFrame/test.html?lsd=d72cfa61-fe52-45f3-a580-7bdb30ba4372, line 29: SecurityError: The operation is insecure.
+JavaScript error: https://widgets.outbrain.com/widgetOBUserSync/obUserSync.html#pid=26860&dmpenabled=false&filterDMP=&csenabled=true&d=xb7LNrgy8aKe6FOaWbswPqqTDe-wW91V0ifnqhe3Onkp6oS_L6QRUUsgT34F81bp&gdpr=0&cmpNeeded=false&gdprVer=2&ccpa=1---&country=US, line 3: SecurityError: The operation is insecure.
+JavaScript error: data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=, line 1: SyntaxError: illegal character U+0001
+1611964543737	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'loading'.
+JavaScript error: https://widgets.outbrain.com/nanoWidget/externals/obUserFrame/test.html?lsd=d72cfa61-fe52-45f3-a580-7bdb30ba4372, line 29: SecurityError: The operation is insecure.
+JavaScript error: https://widgets.outbrain.com/widgetOBUserSync/obUserSync.html#pid=26860&dmpenabled=false&filterDMP=&csenabled=true&d=xb7LNrgy8aKe6FOaWbswPqqTDe-wW91V0ifnqhe3Onkp6oS_L6QRUUsgT34F81bp&gdpr=0&cmpNeeded=false&gdprVer=2&ccpa=1---&country=US, line 3: SecurityError: The operation is insecure.
+JavaScript error: https://widgets.outbrain.com/widgetOBUserSync/obUserSync.html#pid=26860&dmpenabled=false&filterDMP=&csenabled=true&d=xb7LNrgy8aKe6FOaWbswPqqTDe-wW91V0ifnqhe3Onkp6oS_L6QRUUsgT34F81bp&gdpr=0&cmpNeeded=false&gdprVer=2&ccpa=1---&country=US, line 3: SecurityError: The operation is insecure.
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: https://widgets.outbrain.com/nanoWidget/externals/obUserFrame/test.html?lsd=d72cfa61-fe52-45f3-a580-7bdb30ba4372, line 29: SecurityError: The operation is insecure.
+JavaScript error: https://widgets.outbrain.com/nanoWidget/externals/obUserFrame/test.html?lsd=d72cfa61-fe52-45f3-a580-7bdb30ba4372, line 29: SecurityError: The operation is insecure.
+JavaScript error: https://widgets.outbrain.com/widgetOBUserSync/obUserSync.html#pid=26860&dmpenabled=false&filterDMP=&csenabled=true&d=xb7LNrgy8aKe6FOaWbswPqqTDe-wW91V0ifnqhe3Onkp6oS_L6QRUUsgT34F81bp&gdpr=0&cmpNeeded=false&gdprVer=2&ccpa=1---&country=US, line 3: SecurityError: The operation is insecure.
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=, line 1: SyntaxError: illegal character U+0001
+JavaScript error: https://widgets.outbrain.com/nanoWidget/externals/obUserFrame/test.html?lsd=d72cfa61-fe52-45f3-a580-7bdb30ba4372, line 29: SecurityError: The operation is insecure.
+JavaScript error: https://widgets.outbrain.com/widgetOBUserSync/obUserSync.html#pid=26860&dmpenabled=false&filterDMP=&csenabled=true&d=xb7LNrgy8aKe6FOaWbswPqqTDe-wW91V0ifnqhe3Onkp6oS_L6QRUUsgT34F81bp&gdpr=0&cmpNeeded=false&gdprVer=2&ccpa=1---&country=US, line 3: SecurityError: The operation is insecure.
+JavaScript error: https://widgets.outbrain.com/widgetOBUserSync/obUserSync.html#pid=26860&dmpenabled=false&filterDMP=&csenabled=true&d=xb7LNrgy8aKe6FOaWbswPqqTDe-wW91V0ifnqhe3Onkp6oS_L6QRUUsgT34F81bp&gdpr=0&cmpNeeded=false&gdprVer=2&ccpa=1---&country=US, line 3: SecurityError: The operation is insecure.
+JavaScript error: https://widgets.outbrain.com/nanoWidget/externals/obUserFrame/test.html?lsd=d72cfa61-fe52-45f3-a580-7bdb30ba4372, line 29: SecurityError: The operation is insecure.
+JavaScript error: https://widgets.outbrain.com/nanoWidget/externals/obUserFrame/test.html?lsd=d72cfa61-fe52-45f3-a580-7bdb30ba4372, line 29: SecurityError: The operation is insecure.
+JavaScript error: https://widgets.outbrain.com/widgetOBUserSync/obUserSync.html#pid=26860&dmpenabled=false&filterDMP=&csenabled=true&d=xb7LNrgy8aKe6FOaWbswPqqTDe-wW91V0ifnqhe3Onkp6oS_L6QRUUsgT34F81bp&gdpr=0&cmpNeeded=false&gdprVer=2&ccpa=1---&country=US, line 3: SecurityError: The operation is insecure.
+JavaScript error: data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=, line 1: SyntaxError: illegal character U+0001
+JavaScript error: data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=, line 1: SyntaxError: illegal character U+0001
+JavaScript error: data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=, line 1: SyntaxError: illegal character U+0001

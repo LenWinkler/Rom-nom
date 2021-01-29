@@ -27,6 +27,15 @@ def download_roms(url):
         except:
             continue
 
-    print(links)
+    print('opening tabs')
+
+    for i in range(len(links)):
+        driver.execute_script("window.open('');")
+
+    tabs = driver.window_handles[1:]
+
+    for i in range(len(tabs)):
+        driver.switch_to.window(tabs[i])
+        driver.get(links[i])
 
 download_roms('asdf')
