@@ -1,17 +1,8 @@
-# import requests, bs4
-# import get_dl_link from get_dl_link
-
-# def traverse_roms(url):
-#     res = requests.get(url)
-#     res.raise_for_status()
-
-# bs4 doesn't work since site uses JS to start dl. switching to selenium
-
 from selenium import webdriver
 import time
 
 def download_roms(url):
-    driver = webdriver.Firefox()
+    driver = webdriver.Chrome()
     print('opening url...')
     time.sleep(3)
     driver.get('https://romsmania.cc/roms/nintendo')
@@ -27,15 +18,18 @@ def download_roms(url):
         except:
             continue
 
-    print('opening tabs')
-
+    print('opening tabs...')
     for i in range(len(links)):
         driver.execute_script("window.open('');")
 
     tabs = driver.window_handles[1:]
 
+    print('starting downloads...')
     for i in range(len(tabs)):
         driver.switch_to.window(tabs[i])
         driver.get(links[i])
+        dl_button = driver.find_elements_by_class_name('btn__right')[0]
+        dl_button.click()
+        time.sleep(10)
 
 download_roms('asdf')
