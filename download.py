@@ -48,4 +48,9 @@ def download_roms(url):
         print(f'downloading {rom_name}')
         time.sleep(4)
 
+    print('closing tabs...')
+    for i in range(len(tabs)):
+        driver.switch_to.window(tabs[i])
+        driver.close()
+
 download_roms('asdf')
