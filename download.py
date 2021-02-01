@@ -38,12 +38,14 @@ def download_roms(url):
 
     tabs = driver.window_handles[1:]
 
-    print('starting downloads...')
+    print('starting downloads...\n')
     for i in range(len(tabs)):
         driver.switch_to.window(tabs[i])
         driver.get(links[i])
         dl_button = driver.find_elements_by_class_name('btn__right')[0]
+        rom_name = driver.find_element_by_xpath("//h1[@itemprop='name']").text
         dl_button.click()
+        print(f'downloading {rom_name}')
         time.sleep(4)
 
 download_roms('asdf')
