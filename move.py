@@ -26,6 +26,8 @@ def move_roms(dl_dir, dest_dir):
             inventory.write(zip_file[:-4] + '\n')
             inventory.close()
 
+        os.remove(zip_file)
+
         # print('\n' + '*' * 10)
         # print(folder)
         # for file in os.listdir(os.path.abspath(folder)):
