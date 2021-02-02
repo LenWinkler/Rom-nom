@@ -20,8 +20,11 @@ def move_roms(dl_dir, dest_dir):
         shutil.copy(zip_file, cwd + '/zip_files')
 
         with zipfile.ZipFile(os.path.abspath(zip_file), 'r') as zip_ref:
-            print(zip_file)
             zip_ref.extractall(cwd)
+
+        with open('inventory.txt', 'a') as inventory:
+            inventory.write(zip_file[:-4] + '\n')
+            inventory.close()
 
         # print('\n' + '*' * 10)
         # print(folder)
