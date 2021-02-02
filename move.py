@@ -1,19 +1,28 @@
 # start of a fn that will move the unzipped files to the appropriate folders
 # on the flash drive
 
-import os
+import os, shutil
 
-os.chdir(r'/Users/lenwinkler/Desktop/RETROPIE/ROMS/')
+def move_roms(dl_dir, dest_dir):
 
-for folder in os.listdir(os.getcwd()):
-    if folder.startswith('.'):
-        continue
+    os.chdir(r'/Users/lenwinkler/Desktop/RETROPIE/ROMS/NES')
+    os.makedirs('zip_files', exist_ok=True)
 
-    print('\n' + '*' * 10)
-    print(folder)
-    for file in os.listdir(os.path.abspath(folder)):
-        if file.startswith('.') or file.endswith('.txt'):
+    for zipfile in os.listdir(os.getcwd()):
+        if zipfile.startswith('.') or not zipfile.endswith('.zip'):
             continue
-        print(' ---' + file)
+        
+        shutil.copy(zipfile, os.getcwd() + '/zip_files')
+        
+        
 
-    print('*' * 10)
+        # print('\n' + '*' * 10)
+        # print(folder)
+        # for file in os.listdir(os.path.abspath(folder)):
+        #     if file.startswith('.') or file.endswith('.txt'):
+        #         continue
+        #     print(' ---' + file)
+
+        # print('*' * 10)
+
+move_roms('dl_dir', 'dest_dir')
