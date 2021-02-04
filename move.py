@@ -15,6 +15,8 @@ def move_roms(dl_dir, dest_dir):
         os.makedirs(fr'{dst_dir}/NES')
     dst_dir = fr'{dst_dir}/NES'
 
+    inventory_list = []
+
     for zip_file in os.listdir(cwd):
         if zip_file.startswith('.') or not zip_file.endswith('.zip'):
             continue
@@ -24,11 +26,17 @@ def move_roms(dl_dir, dest_dir):
         with zipfile.ZipFile(os.path.abspath(zip_file), 'r') as zip_ref:
             zip_ref.extractall(cwd)
 
-        with open('inventory.txt', 'a') as inventory:
-            inventory.write(zip_file[:-4] + '\n')
-            inventory.close()
+        inventory_list.append(zip_file[:-4])
+        
 
         os.remove(zip_file)
+
+    inventory_list.sort()
+
+    for title in inventory_list:
+        with open('inventory.txt', 'a') as inventory:
+            inventory.write(title + '\n')
+            inventory.close()
 
     for item in os.listdir(cwd):
         if item.endswith('nes'):
