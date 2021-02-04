@@ -1,17 +1,19 @@
-# start of a fn that will move the unzipped files to the appropriate folders
-# on the flash drive
-
 import os, shutil, zipfile
 
 def move_roms(dl_dir, dest_dir):
 
     os.chdir(r'/Users/lenwinkler/Desktop/RETROPIE/ROMS/NES')
     cwd = os.getcwd()
+    dst_dir = (r'/Volumes/UUI')
     os.makedirs('zip_files', exist_ok=True)
 
-    if not os.path.isfile(cwd + '/inventory.txt'):
+    if not os.path.isfile(fr'{cwd}/inventory.txt'):
         inventory = open('inventory.txt', 'a')
         inventory.close()
+
+    if not os.path.isdir(fr'{dst_dir}/NES'):
+        os.makedirs(fr'{dst_dir}/NES')
+    dst_dir = fr'{dst_dir}/NES'
 
     for zip_file in os.listdir(cwd):
         if zip_file.startswith('.') or not zip_file.endswith('.zip'):
@@ -28,13 +30,11 @@ def move_roms(dl_dir, dest_dir):
 
         os.remove(zip_file)
 
-        # print('\n' + '*' * 10)
-        # print(folder)
-        # for file in os.listdir(os.path.abspath(folder)):
-        #     if file.startswith('.') or file.endswith('.txt'):
-        #         continue
-        #     print(' ---' + file)
-
-        # print('*' * 10)
+    for item in os.listdir(cwd):
+        if item.endswith('nes'):
+            shutil.copy(item, dst_dir)
+        elif item == 'zip_files' or item == 'inventory.txt':
+            continue
+        os.remove(item)
 
 move_roms('dl_dir', 'dest_dir')
