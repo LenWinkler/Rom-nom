@@ -8,7 +8,7 @@ This will eventually be a script that will download a bunch of roms from romsman
 - [x] Function that goes through all the roms on a page and calls the above function on each
 - [ ] Once we reach the end of a page, go to next page
 - [x] Download each zip file
-- [ ] Send a copy of each zip file to a "backup" dir
-- [ ] Unzip each file
-- [ ] Go through all unzipped dirs, take name and add it to "inventory" file, move rom to flash drive
-- [ ] Delete rom/zip files from HD (this could be done as they're copied or all at once at the end)
+- [x] Send a copy of each zip file to a "backup" dir
+- [x] Unzip each file
+- [x] Go through all unzipped dirs, take name and add it to "inventory" file, move rom to flash drive
+- [x] Delete rom/zip files from HD (this could be done as they're copied or all at once at the end)
