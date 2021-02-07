@@ -58,6 +58,8 @@ def download_roms(url):
         for i in range(len(tabs)):
             driver.switch_to.window(tabs[i])
             driver.close()
+        
+        driver.switch_to.window(driver.window_handles[0])
 
         try:
             next_page = driver.find_element_by_xpath("//a[@title='Next page']")
@@ -67,5 +69,6 @@ def download_roms(url):
 
         driver.execute_script("arguments[0].scrollIntoView(true);", next_page)
         next_page.click()
+        time.sleep(2)
 
 download_roms('asdf')
