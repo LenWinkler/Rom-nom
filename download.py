@@ -23,6 +23,8 @@ def download_roms(url):
     print('grabbing links to download pages...')
     time.sleep(3)
 
+    already_downloaded = set()
+
     should_continue = True
     while should_continue:
         # grab all td tags, then put the url for each title into a list
@@ -40,12 +42,16 @@ def download_roms(url):
 
         tabs = driver.window_handles[1:]
 
-        print('starting downloads...\n')
+        print('starting downloads...')
         for i in range(len(tabs)):
             driver.switch_to.window(tabs[i])
             driver.get(links[i])
             dl_button = driver.find_elements_by_class_name('btn__right')[0]
             rom_name = driver.find_element_by_xpath("//h1[@itemprop='name']").text
+            # avoid dups
+            if rom_name in already_downloaded:
+                continue
+            already_downloaded.add(rom_name)
             # for NES, if we hit the 'ZZZ' roms, quit
             if rom_name.startswith('ZZZ'):
                 should_continue = False
@@ -54,7 +60,7 @@ def download_roms(url):
             print(f'downloading {rom_name}')
             time.sleep(4)
 
-        print('closing tabs...')
+        print('closing tabs...\n')
         for i in range(len(tabs)):
             driver.switch_to.window(tabs[i])
             driver.close()
