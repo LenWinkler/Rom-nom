@@ -1,25 +1,25 @@
 from selenium import webdriver
 import time, os
 
-# helper function that creates a chrome instance with custom download path
-def new_chrome_browser():
-    options = webdriver.ChromeOptions()
-    download_path = '/Users/lenwinkler/Desktop/RETROPIE/ROMS/NES'
-    os.makedirs(download_path, exist_ok=True)
+def download_roms(url, file_destination):
 
-    prefs = {}
-    prefs['profile.default_content_settings.popups']=0
-    prefs['download.default_directory']=download_path
-    options.add_experimental_option("prefs", prefs)
-    browser = webdriver.Chrome(options=options, executable_path='/Users/lenwinkler/Downloads/chromedriver')
+    # helper function that creates a chrome instance with custom download path
+    def new_chrome_browser(save_location):
+        options = webdriver.ChromeOptions()
+        os.makedirs(save_location, exist_ok=True)
 
-    return browser
+        prefs = {}
+        prefs['profile.default_content_settings.popups']=0
+        prefs['download.default_directory']=save_location
+        options.add_experimental_option("prefs", prefs)
+        browser = webdriver.Chrome(options=options, executable_path='/Users/lenwinkler/Downloads/chromedriver')
 
-def download_roms(url):
-    driver = new_chrome_browser()
+        return browser
+
+    driver = new_chrome_browser(file_destination)
     print('opening url...')
     time.sleep(3)
-    driver.get('https://romsmania.cc/roms/nintendo')
+    driver.get(url)
     print('grabbing links to download pages...')
     time.sleep(3)
 
@@ -76,5 +76,3 @@ def download_roms(url):
         driver.execute_script("arguments[0].scrollIntoView(true);", next_page)
         next_page.click()
         time.sleep(2)
-
-download_roms('asdf')
