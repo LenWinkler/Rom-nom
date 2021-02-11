@@ -1,14 +1,10 @@
-# rom_script
+# Rom Nom
 
-This will eventually be a script that will download a bunch of roms from romsmania, unzip them, and send them to certain folders on a flash drive.
+I wrote this to automate the downloading, unzipping, and moving of rom files from romsmania.
 
-## List of TODOS (not necessarily in order, WIP):
+Given a URL for a certain system on romsmania (e.g. 'https://romsmania.cc/roms/nintendo') it 
+uses Python3 and Selenium to control a Chrome browser and download every rom for that platform
+into a specified directory.
 
-- [x] Function that grabs download link from a rom detail page
-- [x] Function that goes through all the roms on a page and calls the above function on each
-- [ ] Once we reach the end of a page, go to next page
-- [x] Download each zip file
-- [x] Send a copy of each zip file to a "backup" dir
-- [x] Unzip each file
-- [x] Go through all unzipped dirs, take name and add it to "inventory" file, move rom to flash drive
-- [x] Delete rom/zip files from HD (this could be done as they're copied or all at once at the end)
+It then copies the zip files to a backup directory, unzips each file and moves it to a
+specified folder, and deletes the unnecessary files from the HD.
