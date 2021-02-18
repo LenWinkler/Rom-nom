@@ -17,11 +17,13 @@ def download_roms(url, file_destination, filters):
         return browser
 
     driver = new_chrome_browser(file_destination)
-    print('opening url...')
+    print('starting rom nom...\n')
     time.sleep(3)
     driver.get(url)
-    print('grabbing links to download pages...')
     time.sleep(3)
+
+    start = time.perf_counter()
+    download_count = 0
 
     already_downloaded = set()
 
@@ -63,6 +65,7 @@ def download_roms(url, file_destination, filters):
 
             already_downloaded.add(rom_name)
             dl_button.click()
+            download_count += 1
             print(f'downloading {rom_name}')
             time.sleep(4)
 
@@ -82,3 +85,7 @@ def download_roms(url, file_destination, filters):
         driver.execute_script("arguments[0].scrollIntoView(true);", next_page)
         next_page.click()
         time.sleep(2)
+
+    end = time.perf_counter()
+    time_elapsed = (end - start) / 60 / 60
+    print(f'downloaded {download_count} roms in {end - start:0.2f} hours')
