@@ -53,7 +53,7 @@ def download_roms(url, file_destination, filters):
             should_skip = False
 
             for f in filters:
-                if f in rom_name:
+                if f in rom_name.lower():
                     should_skip = True
                     break
 
