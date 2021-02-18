@@ -1,7 +1,7 @@
 from selenium import webdriver
 import time, os
 
-def download_roms(url, file_destination):
+def download_roms(url, file_destination, filters):
 
     # helper function that creates a chrome instance with custom download path
     def new_chrome_browser(save_location):
@@ -48,14 +48,20 @@ def download_roms(url, file_destination):
             driver.get(links[i])
             dl_button = driver.find_elements_by_class_name('btn__right')[0]
             rom_name = driver.find_element_by_xpath("//h1[@itemprop='name']").text
-            # avoid dups
+            should_skip = False
+
+            for f in filters:
+                if f in rom_name:
+                    should_skip = True
+                    break
+
+            if should_skip:
+                continue
+
             if rom_name in already_downloaded:
                 continue
+
             already_downloaded.add(rom_name)
-            # for NES, if we hit the 'ZZZ' roms, quit
-            if rom_name.startswith('ZZZ'):
-                should_continue = False
-                break
             dl_button.click()
             print(f'downloading {rom_name}')
             time.sleep(4)
