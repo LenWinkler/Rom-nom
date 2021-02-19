@@ -68,7 +68,6 @@ def download_roms(url, file_destination, filters):
             dl_button.click()
             download_count += 1
             print(f'downloading {rom_name}')
-            time.sleep(4)
 
         print('closing tabs ᗤ  👻 👻\n')
         for i in range(len(tabs)):
