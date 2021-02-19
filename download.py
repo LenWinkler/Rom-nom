@@ -17,7 +17,7 @@ def download_roms(url, file_destination, filters):
         return browser
 
     driver = new_chrome_browser(file_destination)
-    print('starting rom nom...\n')
+    print('starting rom nom ᗧ * * *\n')
     time.sleep(3)
     driver.get(url)
     time.sleep(3)
@@ -38,13 +38,13 @@ def download_roms(url, file_destination, filters):
             except:
                 continue
 
-        print('opening tabs...')
+        print('opening tabs ᗧ * * * 🍒\n')
         for i in range(len(links)):
             driver.execute_script("window.open('');")
 
         tabs = driver.window_handles[1:]
 
-        print('starting downloads...')
+        print('starting downloads ᗧ * * 👻 * 👻\n')
         for i in range(len(tabs)):
             driver.switch_to.window(tabs[i])
             driver.get(links[i])
@@ -52,10 +52,11 @@ def download_roms(url, file_destination, filters):
             rom_name = driver.find_element_by_xpath("//h1[@itemprop='name']").text
             should_skip = False
 
-            for f in filters:
-                if f in rom_name.lower():
-                    should_skip = True
-                    break
+            if filters:
+                for f in filters:
+                    if f in rom_name.lower():
+                        should_skip = True
+                        break
 
             if should_skip:
                 continue
@@ -69,7 +70,7 @@ def download_roms(url, file_destination, filters):
             print(f'downloading {rom_name}')
             time.sleep(4)
 
-        print('closing tabs...\n')
+        print('closing tabs ᗤ  👻 👻\n')
         for i in range(len(tabs)):
             driver.switch_to.window(tabs[i])
             driver.close()
