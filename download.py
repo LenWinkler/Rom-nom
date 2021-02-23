@@ -88,4 +88,4 @@ def download_roms(url, file_destination, filters):
 
     end = time.perf_counter()
     time_elapsed = (end - start) / 60 / 60
-    print(f'downloaded {download_count} roms in {end - start:0.2f} hours')
+    print(f'downloaded {download_count} roms in {time_elapsed} hours')
