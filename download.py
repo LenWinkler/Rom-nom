@@ -27,10 +27,35 @@ def download_roms(url, file_destination, filters):
     download_count = 0
 
     already_downloaded = set()
+    resuming_download = os.path.isfile('progress.txt')
+
+    if resuming_download:
+        print('figuring out where we left off. this may take a minute...\n')
+        with open('progress.txt', 'r') as progress:
+            for line in progress:
+                already_downloaded.add(line.rstrip())
+        progress.close()
+
+    while resuming_download:
+        td_tags = driver.find_elements_by_tag_name('td')
+        links = []
+        for td in td_tags:
+            try:
+                links.append(td.find_element_by_tag_name('a').get_attribute('href'))
+            except:
+                continue
+
+        if links[-1] in already_downloaded:
+            next_page = driver.find_element_by_xpath("//a[@title='Next page']")
+            driver.execute_script("arguments[0].scrollIntoView(true);", next_page)
+            next_page.click()
+            time.sleep(2)
+        else:
+            resuming_download = False
 
     should_continue = True
+
     while should_continue:
-        # grab all td tags, then put the url for each title into a list
         td_tags = driver.find_elements_by_tag_name('td')
         links = []
         for td in td_tags:
@@ -62,20 +87,22 @@ def download_roms(url, file_destination, filters):
             if should_skip:
                 continue
 
-            if rom_name in already_downloaded:
+            if links[i] in already_downloaded:
                 continue
 
             with open('inventory.txt', 'a') as inventory:
                 inventory.write(rom_name + '\n')
             inventory.close()
 
-            already_downloaded.add(rom_name)
+            already_downloaded.add(links[i])
+            with open('progress.txt', 'a') as progress:
+                progress.write(links[i] + '\n')
 
             dl_button.click()
             download_count += 1
             print(f'downloading {rom_name}')
 
-        print('closing tabs ᗤ  👻 👻\n')
+        print('\nclosing tabs ᗤ  👻 👻\n')
         for i in range(len(tabs)):
             driver.switch_to.window(tabs[i])
             driver.close()
@@ -95,3 +122,5 @@ def download_roms(url, file_destination, filters):
     end = time.perf_counter()
     time_elapsed = (end - start) / 60 / 60
     print(f'downloaded {download_count} roms in {time_elapsed} hours')
+
+    os.remove('progress.txt')
