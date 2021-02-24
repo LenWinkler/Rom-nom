@@ -17,6 +17,7 @@ def download_roms(url, file_destination, filters):
         return browser
 
     driver = new_chrome_browser(file_destination)
+    os.chdir(file_destination)
     print('starting rom nom ᗧ * * *\n')
     time.sleep(3)
     driver.get(url)
@@ -64,7 +65,12 @@ def download_roms(url, file_destination, filters):
             if rom_name in already_downloaded:
                 continue
 
+            with open('inventory.txt', 'a') as inventory:
+                inventory.write(rom_name + '\n')
+            inventory.close()
+
             already_downloaded.add(rom_name)
+
             dl_button.click()
             download_count += 1
             print(f'downloading {rom_name}')
