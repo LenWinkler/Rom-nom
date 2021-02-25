@@ -1,8 +1,8 @@
 import time, os
 from chrome_custom import new_chrome_browser
+from get_links import get_links
 
 def download_roms(url, file_destination, filters):
-
     driver = new_chrome_browser(file_destination)
     os.chdir(file_destination)
     print('starting rom nom ᗧ * * *\n')
@@ -24,13 +24,7 @@ def download_roms(url, file_destination, filters):
         progress.close()
 
     while resuming_download:
-        td_tags = driver.find_elements_by_tag_name('td')
-        links = []
-        for td in td_tags:
-            try:
-                links.append(td.find_element_by_tag_name('a').get_attribute('href'))
-            except:
-                continue
+        links = get_links(driver)
 
         if links[-1] in already_downloaded:
             next_page = driver.find_element_by_xpath("//a[@title='Next page']")
@@ -43,13 +37,7 @@ def download_roms(url, file_destination, filters):
     should_continue = True
 
     while should_continue:
-        td_tags = driver.find_elements_by_tag_name('td')
-        links = []
-        for td in td_tags:
-            try:
-                links.append(td.find_element_by_tag_name('a').get_attribute('href'))
-            except:
-                continue
+        links = get_links(driver)
 
         print('opening tabs ᗧ * * * 🍒\n')
         for i in range(len(links)):
