@@ -1,20 +1,7 @@
-from selenium import webdriver
 import time, os
+from chrome_custom import new_chrome_browser
 
 def download_roms(url, file_destination, filters):
-
-    # helper function that creates a chrome instance with custom download path
-    def new_chrome_browser(save_location):
-        options = webdriver.ChromeOptions()
-        os.makedirs(save_location, exist_ok=True)
-
-        prefs = {}
-        prefs['profile.default_content_settings.popups']=0
-        prefs['download.default_directory']=save_location
-        options.add_experimental_option("prefs", prefs)
-        browser = webdriver.Chrome(options=options, executable_path='/Users/lenwinkler/Downloads/chromedriver')
-
-        return browser
 
     driver = new_chrome_browser(file_destination)
     os.chdir(file_destination)
