@@ -96,6 +96,6 @@ def download_roms(url, file_destination, filters):
 
     end = time.perf_counter()
     time_elapsed = (end - start) / 60 / 60
-    print(f'downloaded {download_count} roms in {time_elapsed} hours')
+    print(f'downloaded {download_count} roms in {round(time_elapsed, 2)} hours')
 
     os.remove('progress.txt')
