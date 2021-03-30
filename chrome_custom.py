@@ -1,5 +1,7 @@
-from selenium import webdriver
 import os
+
+from selenium import webdriver
+
 
 # creates a chrome instance with custom download path
 def new_chrome_browser(download_path):

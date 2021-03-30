@@ -1,6 +1,9 @@
-import time, os
+import os
+import time
+
 from chrome_custom import new_chrome_browser
 from get_links import get_links
+
 
 def download_roms(url, file_destination, filters):
     driver = new_chrome_browser(file_destination)

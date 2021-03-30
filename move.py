@@ -1,4 +1,8 @@
-import os, shutil, zipfile, time
+import os
+import shutil
+import time
+import zipfile
+
 
 def move_roms(move_from, move_to):
     print(move_from, move_to)
