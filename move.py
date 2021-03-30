@@ -3,10 +3,13 @@ import shutil
 import time
 import zipfile
 
+from rich.console import Console
+from rich.text import Text
+
 
 def move_roms(move_from, move_to):
-    print(move_from, move_to)
-    print('\nstarting move...\n')
+    console = Console()
+    console.print(Text.assemble(("\nStarting move 🚚💨💨\n\n", "bold green")))
     start = time.perf_counter()
     os.chdir(move_from)
     cwd = os.getcwd()
@@ -27,7 +30,8 @@ def move_roms(move_from, move_to):
         os.remove(zip_file)
 
     if move_from != move_to:
-        print(fr'copying files to {move_to}...\n')
+        console.print(Text.assemble(("Copying files to ", "green"), 
+                                    (move_to, "bold"), "\n"))
         for item in os.listdir(cwd):
             if (
                 item == 'zip_files' 
@@ -39,4 +43,4 @@ def move_roms(move_from, move_to):
             os.remove(item)
 
     end = time.perf_counter()
-    print(f'move completed in {end - start:0.2f} seconds\n')
+    print(f'Move completed in {end - start:0.2f} seconds\n')
