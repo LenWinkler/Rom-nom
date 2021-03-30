@@ -30,8 +30,8 @@ want_to_unzip = y_or_n[want_to_unzip]
 if not want_to_unzip:
     sys.exit('\nquitting Rom Nom\n')
 
-unzipped_roms_destination = input('\nEnter the destination filepath for the' 
-                                  'unzipped files\nLeave blank to unzip files' 
+unzipped_roms_destination = input('\nEnter the destination filepath for the ' 
+                                  'unzipped files\nLeave blank to unzip files ' 
                                   'where they were downloaded: ')
 
 if unzipped_roms_destination == '':

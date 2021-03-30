@@ -1,14 +1,29 @@
 import os
 import time
+from subprocess import call
+
+from rich.console import Console
+from rich.text import Text
 
 from chrome_custom import new_chrome_browser
 from get_links import get_links
 
 
 def download_roms(url, file_destination, filters):
+    console = Console()
+    start_program_text = Text.assemble(("Starting rom nom ", "green"),
+                                       ("ᗧ ", "bold yellow"), "* * *\n")
+    left_off_text = Text.assemble(("Figuring out where we left off. "
+                                  "This may take a minute... ⏳\n", "bold"))
+    open_tabs_text = Text.assemble(("Opening tabs ", "green"), 
+                                   ("ᗧ ", "bold yellow"), "* * * 🍒\n")
+    start_dls_text = Text.assemble(("Starting downloads ", "green"), 
+                                   ("ᗧ ", "bold yellow"), "* * 👻 * 👻\n")
+    close_tabs_text = Text.assemble("\n", ("Closing tabs ", "bold"), 
+                                    ("ᗤ ", "bold yellow"),  "👻 👻\n")
     driver = new_chrome_browser(file_destination)
     os.chdir(file_destination)
-    print('starting rom nom ᗧ * * *\n')
+    console.print(start_program_text)
     time.sleep(3)
     driver.get(url)
     time.sleep(3)
@@ -20,7 +35,7 @@ def download_roms(url, file_destination, filters):
     resuming_download = os.path.isfile('progress.txt')
 
     if resuming_download:
-        print('figuring out where we left off. this may take a minute...\n')
+        console.print(left_off_text)
         with open('progress.txt', 'r') as progress:
             for line in progress:
                 already_downloaded.add(line.rstrip())
@@ -43,13 +58,13 @@ def download_roms(url, file_destination, filters):
     while should_continue:
         links = get_links(driver)
 
-        print('opening tabs ᗧ * * * 🍒\n')
+        console.print(open_tabs_text)
         for i in range(len(links)):
             driver.execute_script("window.open('');")
 
         tabs = driver.window_handles[1:]
 
-        print('starting downloads ᗧ * * 👻 * 👻\n')
+        console.print(start_dls_text)
         for i in range(len(tabs)):
             driver.switch_to.window(tabs[i])
             driver.get(links[i])
@@ -80,14 +95,17 @@ def download_roms(url, file_destination, filters):
 
             dl_button.click()
             download_count += 1
-            print(f'downloading {rom_name}')
+            console.print(Text.assemble(("Downloading  ", "green"), 
+                                        (rom_name, "bold")))
 
-        print('\nclosing tabs ᗤ  👻 👻\n')
+        console.print(close_tabs_text)
         for i in range(len(tabs)):
             driver.switch_to.window(tabs[i])
             driver.close()
         
         driver.switch_to.window(driver.window_handles[0])
+
+        call('clear')
 
         try:
             next_page = driver.find_element_by_xpath("//a[@title='Next page']")
@@ -101,7 +119,7 @@ def download_roms(url, file_destination, filters):
 
     end = time.perf_counter()
     time_elapsed = (end - start) / 60 / 60
-    print(f'downloaded {download_count} roms' 
-           'in {round(time_elapsed, 2)} hours')
+    print(f'Downloaded {download_count} roms '
+          f'in {round(time_elapsed, 2)} hours')
 
     os.remove('progress.txt')
