@@ -30,7 +30,7 @@ def move_roms(move_from, move_to):
         os.remove(zip_file)
 
     if move_from != move_to:
-        console.print(Text.assemble(("Copying files to ", "green"), 
+        console.print(Text.assemble(("Copying files to ", "bold green"), 
                                     (move_to, "bold"), "\n"))
         for item in os.listdir(cwd):
             if (

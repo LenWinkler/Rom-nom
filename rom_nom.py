@@ -1,10 +1,32 @@
 import sys
 from subprocess import call
 
+from rich.console import Console
+from rich.text import Text
+
 from download import download_roms
 from move import move_roms
 
-url = input('\n\nEnter the romsmania url:\n\nURL: ').strip()
+
+call('clear')
+print('\n')
+console = Console()
+
+console.print(Text.assemble(
+             ("   _________  ____ ___     ____  ____  ____ ___ ", 
+              "bold green")))
+console.print(Text.assemble(
+             (r"  / ___/ __ \/ __ `__ \   / __ \/ __ \/ __ `__ \ ", 
+               "bold green")))
+console.print(Text.assemble(
+             (r" / /  / /_/ / / / / / /  / / / / /_/ / / / / / /", 
+               "bold green")))
+console.print(Text.assemble(
+             (r"/_/   \____/_/ /_/ /_/  /_/ /_/\____/_/ /_/ /_/ ", 
+               "bold green")))
+print("                                                ")
+
+url = input('\n\nEnter the romsmania url\n\nURL: ').strip()
 file_destination = input('\nWhere should the files be saved?' 
                          '(file path)\n\nFile path: ').strip()
 filters = input('\nFilters? Titles containing these words/chars will be' 
