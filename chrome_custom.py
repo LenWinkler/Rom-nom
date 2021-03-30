@@ -12,6 +12,7 @@ def new_chrome_browser(download_path):
     prefs['profile.default_content_settings.popups']=0
     prefs['download.default_directory']=download_path
     options.add_experimental_option("prefs", prefs)
-    browser = webdriver.Chrome(options=options, executable_path='/Users/lenwinkler/Downloads/chromedriver')
-
+    browser = webdriver.Chrome(options=options, 
+                               executable_path=('/Users/lenwinkler'
+                                                '/Downloads/chromedriver'))
     return browser

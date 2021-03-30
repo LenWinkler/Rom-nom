@@ -31,7 +31,8 @@ def download_roms(url, file_destination, filters):
 
         if links[-1] in already_downloaded:
             next_page = driver.find_element_by_xpath("//a[@title='Next page']")
-            driver.execute_script("arguments[0].scrollIntoView(true);", next_page)
+            driver.execute_script("arguments[0].scrollIntoView(true);", 
+                                  next_page)
             next_page.click()
             time.sleep(2)
         else:
@@ -53,7 +54,8 @@ def download_roms(url, file_destination, filters):
             driver.switch_to.window(tabs[i])
             driver.get(links[i])
             dl_button = driver.find_elements_by_class_name('btn__right')[0]
-            rom_name = driver.find_element_by_xpath("//h1[@itemprop='name']").text
+            rom_name = driver.find_element_by_xpath("//h1"
+                                                    "[@itemprop='name']").text
             should_skip = False
 
             if filters:
@@ -99,6 +101,7 @@ def download_roms(url, file_destination, filters):
 
     end = time.perf_counter()
     time_elapsed = (end - start) / 60 / 60
-    print(f'downloaded {download_count} roms in {round(time_elapsed, 2)} hours')
+    print(f'downloaded {download_count} roms' 
+           'in {round(time_elapsed, 2)} hours')
 
     os.remove('progress.txt')

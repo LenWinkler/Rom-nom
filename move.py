@@ -29,7 +29,11 @@ def move_roms(move_from, move_to):
     if move_from != move_to:
         print(fr'copying files to {move_to}...\n')
         for item in os.listdir(cwd):
-            if item == 'zip_files' or item == 'inventory.txt' or os.path.isdir(item):
+            if (
+                item == 'zip_files' 
+                or item == 'inventory.txt' 
+                or os.path.isdir(item)
+            ):
                 continue
             shutil.copy(item, move_to)
             os.remove(item)

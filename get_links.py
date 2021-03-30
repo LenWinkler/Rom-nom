@@ -3,7 +3,8 @@ def get_links(driver):
     links = []
     for td in td_tags:
         try:
-            links.append(td.find_element_by_tag_name('a').get_attribute('href'))
+            links.append((td.find_element_by_tag_name('a')
+                         .get_attribute('href')))
         except:
             continue
     
