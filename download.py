@@ -99,6 +99,7 @@ def download_roms(url, file_destination, filters):
                                         (rom_name, "bold")))
 
         console.print(close_tabs_text)
+        tabs = driver.window_handles[1:]
         for i in range(len(tabs)):
             driver.switch_to.window(tabs[i])
             driver.close()
