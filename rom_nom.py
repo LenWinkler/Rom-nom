@@ -29,8 +29,8 @@ print("                                                ")
 url = input('\n\nEnter the romsmania url\n\nURL: ').strip()
 file_destination = input('\nWhere should the files be saved?' 
                          '(file path)\n\nFile path: ').strip()
-filters = input('\nFilters? Titles containing these words/chars will be' 
-                'ignored.\nSeparate words/chars with spaces. Not'
+filters = input('\nFilters? Titles containing these words/chars will be ' 
+                'ignored.\nSeparate words/chars with spaces. Not '
                 'case-sensitive.\nLeave blank for no filters\n\nFilters: ')
 filters = filters.strip().split(' ')
 filters = [f.lower() for f in filters]
