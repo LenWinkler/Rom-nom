@@ -20,3 +20,4 @@ TODO List:
 specific version of chrome if we tell it to?
 - [ ] Can we eliminate the need for the browser window? Could it run in headless mode?
 - [ ] Add list of default filters
+- [ ] Add usage instructions to README
