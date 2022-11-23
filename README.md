@@ -15,7 +15,7 @@ specified folder, and deletes the unnecessary files from the HD.**
 
 
 TODO List:
-- [ ] Comment Code
+- [x] Comment Code
 - [ ] Try to avoid issue with chrome and chromedriver version. Can webdriver run a
 specific version of chrome if we tell it to?
 - [ ] Can we eliminate the need for the browser window? Could it run in headless mode?
