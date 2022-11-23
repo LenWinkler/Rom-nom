@@ -13,8 +13,10 @@ def move_roms(move_from, move_to):
     start = time.perf_counter()
     os.chdir(move_from)
     cwd = os.getcwd()
+    # Create a zip_files dir, if it doesn't already exist
     os.makedirs('zip_files', exist_ok=True)
 
+    # Create unzip location if it doesn't already exist
     if not os.path.isdir(move_to):
         os.makedirs(move_to)
 
